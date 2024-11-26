@@ -1,9 +1,61 @@
 *, *::before, *::after {
     box-sizing: border-box;
+    padding: 0;
 }
 
 body {
-    background-color: #111;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    background: url('../images/static.png');
+    padding: 1rem;
     font-family: monospace;
-    color: #efefef;
+    font-size: 1rem;
+    color: #CCC;
+}
+
+a, a:visited {
+    color: #CCFF99;
+}
+
+p, section {
+    max-width: 700px;
+}
+
+img {
+    max-width: 700px;
+    margin: 0.5rem 0;
+}
+
+hr {
+    width: 100%;
+    color: #666;
+    margin: 20px 0;
+}
+
+h1 {
+    padding: 0.5rem 0;
+    width: 100%;
+}
+
+code {
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    background-color: #333;
+    color: #666666;
+    border-radius: 10px;
+}
+
+div {
+    margin: 0.5rem 0;
+}
+
+#array_table {
+    border-collapse: collapse;
+    margin: 1rem 0;
+}
+
+#array_table td {
+    border: 2px solid #666;
+    padding: 10px;
 }

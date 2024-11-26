@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  <link rel="stylesheet" href="/css/style.css"><
+    <title>NUMBERS</title>
+</head>
+<body>
+
+<h1>NUMBERS</h1>
+  <a href="/index.html">HOME</a>
+<hr>
+
+<code>
+    public String numbers (Model model) {<br>
+    int x = 4711;<br>
+    model.addAttribute("integer", x);<br>
+
+    double d = 66.6;<br>
+    model.addAttribute("float", d);<br>
+    return "numbers";<br>
+    }
+</code>
+
+<p th:text="${integer}"></p>
+<code>th:text="${integer}</code>
+
+<p th:text="'Integer: ' + ${integer}"></p>
+<code>th:text="'Integer: ' + ${integer}"</code>
+
+<h2>Literal Substitutions</h2>
+<!-- Literal Substitutions -->
+<p th:text="|integer = ${integer}|"></p>
+<code>th:text="|integer = ${integer}|"</code>
+
+<h2>Doing math</h2>
+
+<div th:text="(2+3) * 4"></div>
+<code>th:text="(2+3) * 4"</code>
+
+<div th:text="${integer}"></div>
+<code>th:text="${integer}"</code>
+
+<div th:text="${integer} * 3"></div>
+<code>th:text="${integer} * 3</code>
+
+<div th:text="${float}"></div>
+<code>th:text="${float}"</code>
+
+</body>
+</html>

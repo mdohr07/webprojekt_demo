@@ -1,13 +1,24 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="https://www.thymeleaf.org">
-<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>S T R I N G S</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <title>STRINGS</title>
 </head>
 <body>
 
+<h1>STRINGS</h1>
+<a href="/index.html">HOME</a>
+<hr>
+Output Text from String:
+<code>tring txt = "Some text";</code>
+
 <p th:text="${text}" /> <!-- Varaiable Expression -->
+<code>p th:text="${text}"</code>
+
+<p th:text="'Ausgabe: ' + ${text}"/>
+<code>p th:text="'Ausgabe: ' + ${text}"</code>
+
 
 </body>
 </html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>GRAPHICS</title>
+</head>
+<body>
+
+<h1>GRAPHICS<</h1>
+<a href="/index.html">HOME</a>
+<hr>
+
+<img src="/images/computer.png" />
+<code>img src="/images/computer.png"</code>
+
+<!--Thymeleaf Style-->
+<img th:src="@{/images/computer.png}" />
+<code>img th:src="@{/images/computer.png}"</code>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>PERSON</title>
+</head>
+<body>
+
+<h1>PERSON</h1>
+<a href="/index.html">HOME</a>
+<hr>
+
+<h2>Print firstName and lastName</h2>
+<sub>From Person.java</sub>
+<div th:object="${person}">
+    Smart lady with a cat: <br>
+    <span th:text="${person.firstName}"></span>
+    <span th:text="${person.lastName}"></span>
+    <!--<span th:text="*{person.lastName}"></span>-->
+</div>
+
+<h2>If it's null...</h2>
+<p>Print firstname or "unknown" if it's null</p>
+<code>
+    th:text="${person.firstName} ?: 'unknown' "
+</code>
+<!--Vorname oder "unknown" ausgeben-->
+<p>First name:
+<span th:text="${person.firstName} ?: 'unknown' "/>
+</p>
+
+<div th:if="${person.ofLegalAge}">Old enough to drink</div>
+
+</body>
+</html>

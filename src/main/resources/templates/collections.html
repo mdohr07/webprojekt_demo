@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  <link rel="stylesheet" href="/css/style.css"><link rel="stylesheet" href="/css/style.css">
+    <title>COLLECTIONS</title>
+</head>
+<body>
+
+<h1>COLLECTIONS</h1>
+  <a href="/index.html">HOME</a>
+<hr/>
+
+<h2>Array of integers</h2>
+<code>th:text="${intArray}"</code>
+<p th:text="${intArray}"></p>
+
+<code>th:text="${intArray[1]}"</code>
+<p th:text="${intArray[1]}"></p>
+
+<h3>Generating with for-each</h3>
+The HTML-Tag is repeatedly generated during the iteration-process
+<code>
+    th:each="number : ${intArray}" th:text="${number}
+</code>
+<!-- Der HTML-Tag wird mit generiert und wiederholt -->
+<div th:each="number : ${intArray}" th:text="${number}"></div>
+
+<p>
+    Iterating through the array with for-each in a table, in which the td-Tag gets repeated.
+</p>
+<table id="array_table">
+    <tr>
+        <td th:each="number : ${intArray}" th:text="${number}"></td>
+    </tr>
+</table>
+<p></p>
+
+<h3>Iterating with a li-element</h3>
+<code>
+    th:each="number : ${integerList}" th:text="${number}"
+</code>
+<ul>
+    <li th:each="number : ${integerList}" th:text="${number}"></li>
+</ul>
+
+
+</body>
+</html>

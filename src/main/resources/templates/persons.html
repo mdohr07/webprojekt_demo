@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>PERSON</title>
+</head>
+<body>
+
+<h1>PERSONS</h1>
+<a href="/index.html">HOME</a>
+<hr>
+
+<h2>Generate table</h2>
+<code>
+tr  th:each="person : ${persons}" <br>
+td  th:text="${person.firstName}" <br>
+td  th:text="${person.lastName}" <br>
+</code>
+
+<table id="array_table">
+    <tr th:each="person : ${persons}">
+        <td th:text="${person.firstName}"/>
+        <td th:text="${person.lastName}"/>
+    </tr>
+</table>
+
+
+</body>
+</html>

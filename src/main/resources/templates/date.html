@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  <link rel="stylesheet" href="css/style.css">
+    <title>DATE</title>
+</head>
+<body>
+<h1>NUMBERS</h1>
+<a href="/index.html">HOME</a>
+<hr>
+
+<div th:text="${#dates.format(date, 'dd.MM.yyyy')}"></div>
+<code>th:text="${#dates.format(date, 'dd.MM.yyyy')}"</code>
+
+<div th:text="${#dates.format(date, 'dd. MMMM yyyy HH:mm')}"></div>
+<code>th:text="${#dates.format(date, 'dd. MMMM yyyy HH:mm')}"</code>
+
+<p th:text="${date}"></p>
+<code>th:text="${date}"</code>
+
+</body>
+</html>

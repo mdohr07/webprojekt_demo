@@ -97,4 +97,16 @@ public class TheController {
         return "graphics";
     }
 
+    @GetMapping("/error")
+    public String errorHandler() {
+        return "errorMessage";
+    }
+
+    @GetMapping("/fragments_demo")
+        public String fragments() {
+            return "fragments_demo";
+        }
+
 }
+
+

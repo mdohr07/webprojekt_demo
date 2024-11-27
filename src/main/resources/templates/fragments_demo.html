@@ -1,10 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <title>INDEX</title>
+    <th:block th:insert="fragments/general::head_entries"></th:block>
+    <title>Fragments Demo</title>
 </head>
 <body>
 
@@ -19,15 +17,14 @@
         </p>
 
         <h2>References</h2>
-        <ul>
-            <li><a href="/strings">Strings</a></li>
-            <li><a href="/numbers">Numbers</a></li>
-            <li><a href="/date">Date</a></li>
-            <li><a href="/collections">Collections</a></li>
-            <li><a href="/person">Person</a></li>
-            <li><a href="/persons">Persons</a></li>
-            <li><a href="templates/graphics">Graphics</a></li>
-        </ul>
+        <a th:href="/strings">Strings</a>
+        <a th:href="/numbers">Numbers</a>
+        <a th:href="/date">Date</a>
+        <a th:href="/collections">Collections</a>
+        <a th:href="/person">Person</a>
+        <a th:href="/persons">Persons</a>
+
+        <a th:href="templates/graphics">Graphics</a>
 
         <h3>TheController.java</h3>
         <section>
@@ -38,7 +35,7 @@
 
 
     </main>
-    <!--    <div th:replace="fragments/general::footer"></div>-->
+<!--    <div th:replace="fragments/general::footer"></div>-->
 </div>
 
 </body>

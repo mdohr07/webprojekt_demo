@@ -11,7 +11,7 @@
 <a href="/index.html">HOME</a>
 <hr>
 Output Text from String:
-<code>tring txt = "Some text";</code>
+<code>String txt = "Some text";</code>
 
 <p th:text="${text}" /> <!-- Varaiable Expression -->
 <code>p th:text="${text}"</code>
@@ -19,6 +19,8 @@ Output Text from String:
 <p th:text="'Ausgabe: ' + ${text}"/>
 <code>p th:text="'Ausgabe: ' + ${text}"</code>
 
+<p th:text="#{mona}"/> <!--# Schlüsselwert; mona = lisa aus messages.properties-->
+<p th:text="#{errormsg.file_not_found}"/>
 
 </body>
 </html>
